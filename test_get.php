@@ -1,0 +1,1 @@
+<?php echo "Hello from test_get.php!"; ?>

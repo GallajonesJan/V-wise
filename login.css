@@ -1,0 +1,253 @@
+/* Custom CSS */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.logo-label {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 0px;
+  font-weight: bold;
+  /* ADDED SPACING: Increased margin below "Sign in" heading */
+  margin-bottom: 15px; /* Increased from 5px to 15px */
+  text-align: left;
+  color: #0b7979;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  text-align: left;
+  color: black;
+}
+
+a {
+  color: #0b7979;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #085e5e;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Base styles for all text and password inputs */
+input[type="text"], /* ADDED THIS LINE to target the student number input */
+input[type="email"],
+.password-container input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  /* The border below for .password-container input will override this if it's in .password-container */
+  border: none; /* Keep this for internal input within password-container */
+}
+
+/* Specific styling for the student number and email input field's margin */
+input[type="text"], /* ADDED THIS LINE */
+input[type="email"] {
+    /* ADDED SPACING: Increased margin below the input fields */
+    display: flex;
+    margin-bottom: 15px; /* This was already 15px, keeping it */
+    border: 1px solid #ccc; /* Ensure a border for standalone text/email inputs */
+}
+
+
+input[type="text"]:focus, /* ADDED THIS LINE */
+input[type="email"]:focus,
+.password-container input:focus {
+  border-color: #0b7979;
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* ADDED SPACING: This margin below the password container also creates space between password and remember me */
+  margin-bottom: 15px; /* This was already 15px, keeping it */
+  border: 1px solid #ccc; /* Keep the border for the container */
+  border-radius: 8px;
+}
+
+.password-container input {
+    border: none; /* Remove border from the input inside the container as the container has it */
+    padding-right: 40px;
+    margin-bottom: 0;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  justify-content: flex-start;
+}
+
+.checkbox-container label {
+  font-size: 13px;
+  color: #666;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #0b7979;
+}
+
+.forgot-password-link {
+  font-size: 13px;
+  color: #0b7979;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover {
+  color: #085e5e;
+}
+
+.sign-in-btn {
+  background-color: #0b7979;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sign-in-btn:hover {
+  background-color: #085e5e;
+  transform: translateY(-2px);
+}
+
+.divider {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #eee;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: white;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.google-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+  transform: translateY(-2px);
+}
+
+.google-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.create-account-text-button {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
+  color: black;
+}
+
+.create-account-text-button a {
+  text-align: center; /* This is what centers the text */
+  margin-top: 5px;
+  font-size: 14px;
+  color: #0b7979;
+}
+
+.forgot {
+  font-size: 13px;
+  text-align: center;
+}
